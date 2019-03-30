@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>vue 第一课</title>
+  <title>vue 第一课 part 2 </title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 </head>
 <body>
+  <div id="root"></div>
 <script>
-  div = document.createElement('div')
-  document.body.append(div)
-
-  new Vue({
-    el: 'div',
-    template: '<div><h1>Hellow world</h1></div>'
+  /*
+  * new Vue({***实例属性***}): 就跟我们写xxx.vue文件中使用的export default 导出的属性一样
+  * 实例化 Vue对象又多种方式。
+  */
+  // 方式1：
+  // new Vue({
+  //   /*
+  //   * 指定el, 将id为root的element替换为vue实例化的模板(template指定的内容)
+  //   * 然后 <div id="root"></div> 会消失，取而代之的是：
+  //   * <div><h1>This is Lesson 1 part 2:</h1> <p><h2>vue instance</h2></p> </div>
+  //   */
+  //   el: '#root',
+  //   template: '<div><h1>This is Lesson 1 part 2:</h1> <p><h2>vue instance</h2></p> </div>'
+  // })
+  // 方式2：
+  const app = new Vue({
+    template: '<div><h1>This is Lesson 1 part 2:</h1> <p><h2>vue instance</h2></p> </div>'
   })
+  app.$mount('#root')
 </script>
 </body>
-</html>
