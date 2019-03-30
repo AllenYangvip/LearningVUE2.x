@@ -25,8 +25,12 @@
   // })
   // 方式2：
   const app = new Vue({
-    template: '<div><h1>This is Lesson 1 part 2:</h1> <p><h2>vue instance</h2></p> </div>'
+    template: '<div><h1>This is Lesson 1 part 2:</h1> <p><h2>vue instance: {{ text }}</h2></p> </div>',
+    data: {
+      text: 1
+    }
   })
   app.$mount('#root')
+  app.text += 1
 </script>
 </body>
