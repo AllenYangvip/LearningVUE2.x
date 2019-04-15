@@ -88,12 +88,71 @@
 
   // 实例属性：options
   // 
+  // const app = new Vue({
+  //   template: '<div> \
+  //     <ul>\
+  //       <li v-for="(value, key) in item">{{ key }}:{{ value }}</li> \
+  //     </ul> \
+  //     </div>',
+  //   data: {
+  //     item: {
+  //       text: 1,
+  //       name: 'allen yang',
+  //       age: 18,
+  //     },
+  //   }
+   
+  // })
+  // app.$mount('#root')
+  // console.log(app.$options)
+
+  // 实例属性：root
+  // 
+  // const app = new Vue({
+  //   template: '<div> \
+  //     <ul>\
+  //       <li v-for="(value, key) in item">{{ key }}:{{ value }}</li> \
+  //     </ul> \
+  //     </div>',
+  //   data: {
+  //     item: {
+  //       text: 1,
+  //       name: 'allen yang',
+  //       age: 18,
+  //     },
+  //   }
+   
+  // })
+  // app.$mount('#root')
+  // console.log('======================')
+  // console.log(app.$root)
+  // console.log('$$$$$$$$$$$$$$$$$$$$$$')
+  // console.log(app.$root === app)
+  // console.log('++++++++++++++++++++++')
+
+  // 实例属性 refs
+  // 
+  // const app = new Vue({
+  //   template: '<div ref="reftest">{{ item.text }}</div>',
+  //   data: {
+  //     item: {
+  //       text: 1,
+  //       name: 'allen yang',
+  //       age: 18,
+  //     },
+  //   }
+   
+  // })
+  // app.$mount('#root')
+  // console.log('======================')
+  // console.log(app.$refs)
+  // console.log('$$$$$$$$$$$$$$$$$$$$$$')
+  // console.log(app.$refs.reftest)
+
+  // 实例属性：attrs
+  // 
   const app = new Vue({
-    template: '<div> \
-      <ul>\
-        <li v-for="(value, key) in item">{{ key }}:{{ value }}</li> \
-      </ul> \
-      </div>',
+    template: '<div ref="reftest">{{ item.text }}</div>',
     data: {
       item: {
         text: 1,
@@ -104,6 +163,10 @@
    
   })
   app.$mount('#root')
-  console.log(app.$options)
+  console.log('======================')
+  console.log(app.$attrs)
+  console.log('$$$$$$$$$$$$$$$$$$$$$$')
+ 
+
 </script>
 </body>
